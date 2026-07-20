@@ -1,0 +1,64 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.khoros.com/khorosmarketingdevdocs/docs/getting-started-with-the-conversations-api
+docs: https://developer.khoros.com/
+notes: >-
+  Derived-from-OpenAPI was not possible — Khoros publishes no machine-readable OpenAPI. This profile is
+  read directly from the public developer documentation. The five Khoros surfaces do not share one auth
+  model: Marketing is OAuth 2.0, Care is HTTP Basic plus a bearer token, and the Communities surfaces
+  use portal-issued API app credentials.
+summary:
+  types:
+  - oauth2
+  - http
+  oauth2_flows:
+  - authorizationCode
+  http_schemes:
+  - basic
+  - bearer
+  api_key_in: []
+schemes:
+- name: MarketingOAuth2
+  api: Khoros Marketing Conversations API
+  type: oauth2
+  flow: authorizationCode
+  description: >-
+    3-legged OAuth 2.0. The documented sequence is a call to `/authorize`, then `/grant`, then `/token`,
+    which returns an `accessToken` presented on subsequent calls as `Authorization: Bearer <accessToken>`.
+  token_lifetime: 2 years
+  token_notes: >-
+    The access token persists across the user's password changes and can be revoked at any time from
+    Profile Settings.
+  base_url: https://api.spredfast.com/v2
+  docs: https://developer.khoros.com/khorosmarketingdevdocs/docs/getting-started-with-the-conversations-api
+  source: https://developer.khoros.com/khorosmarketingdevdocs/docs/getting-started-with-the-conversations-api
+- name: CareBasicAuth
+  api: Khoros Care APIs
+  type: http
+  scheme: basic
+  description: >-
+    HTTP Basic authentication via the Authorization header, used for all Khoros Care API calls outside
+    the Automation Framework. Khoros recommends creating a single distinct user account per project.
+  docs: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+  source: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+- name: CareAutomationBearer
+  api: Khoros Care APIs
+  type: http
+  scheme: bearer
+  description: >-
+    Bearer token used by the Khoros Care Automation Framework. The token is created by a permissioned
+    user with Basic Auth and is refreshable.
+  token_lifetime: 90 days
+  docs: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+  source: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+- name: AuroraApiApps
+  api: Khoros Communities Aurora GraphQL API
+  type: apiKey
+  description: >-
+    Aurora API credentials are generated through "API Apps" in the community admin. The credential
+    detail page is gated behind the Khoros community login, so the exact header/parameter placement is
+    not recorded here rather than guessed.
+  docs: https://developer.khoros.com/khorosauroradevdocs/docs/generating-api-credentials-with-api-apps
+  source: https://developer.khoros.com/khorosauroradevdocs/docs/generating-api-credentials-with-api-apps
+  status: partial — credential placement not publicly documented
+scopes: none documented publicly
