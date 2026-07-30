@@ -1,27 +1,202 @@
 aid: lithium-technologies
 name: Lithium Technologies
-description: 'Lithium Technologies is a company surfaced as a portfolio company of shasta-ventures and
-  added to the API Evangelist network as a stub for enrichment. Sector: enterprise-software. This profile
-  is a lead awaiting the enrichment pipeline.'
+description: 'Lithium Technologies is the online-community and social-customer-engagement software company
+  founded in 2001 that pioneered brand-hosted community forums, gamification and reputation systems for
+  enterprise customer support. Acquired by Vista Equity Partners in 2017 and merged with social-media
+  management vendor Spredfast in 2019, the combined business now operates as Khoros. The Khoros platform
+  carries the Lithium lineage forward across five developer surfaces: Khoros Communities (Classic REST
+  v1/v2 plus the LiQL query language, and the newer Aurora GraphQL API and SDK), Khoros Care (Automation
+  Framework events, Author and Conversation, CRM Gateway, Analytics and Brand Messenger messaging SDKs),
+  Khoros Marketing (the Spredfast-lineage Conversations, Publishing, Analytics Reporting and Notification
+  APIs on api.spredfast.com), and Khoros Flow (Socket, REST and Management APIs for conversational bots).
+  Developer documentation is published at developer.khoros.com and the first-party open-source SDKs
+  remain under the lithiumtech GitHub organization.'
 url: https://raw.githubusercontent.com/api-evangelist/lithium-technologies/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - shasta-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: enrichment-pipeline
+x-successor: khoros
+x-also-known-as:
+- Khoros
+- Spredfast
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://khoros.ai/wp-content/uploads/2026/04/Khoros_OG.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Enterprise Software
-apis: []
+- Online Community
+- Social Media Management
+- Customer Engagement
+- Customer Support
+- Marketing
+- Conversational AI
+- Martech
+apis:
+- name: Khoros Marketing Conversations API
+  description: The Spredfast-lineage Khoros Marketing API surface covering Conversations, Publishing,
+    Analytics Reporting and Notification. Uses a 3-legged OAuth 2.0 flow (/authorize, /grant, /token)
+    and Bearer access tokens that remain valid for two years and persist across password changes.
+  humanURL: https://developer.khoros.com/khorosmarketingdevdocs/reference
+  baseURL: https://api.spredfast.com/v2
+  tags:
+  - Marketing
+  - Social Media Management
+  - Publishing
+  - Analytics
+  properties:
+  - type: Documentation
+    url: https://developer.khoros.com/khorosmarketingdevdocs/docs/developing-and-integrating-with-khoros-marketing
+  - type: APIReference
+    url: https://developer.khoros.com/khorosmarketingdevdocs/reference
+  - type: GettingStarted
+    url: https://developer.khoros.com/khorosmarketingdevdocs/docs/getting-started-with-the-conversations-api
+- name: Khoros Care APIs
+  description: Khoros Care developer surface for agent-based social customer service — the event-driven
+    Automation Framework, the Author and Conversation API, the CRM Gateway API, the Analytics API and
+    the Brand Messenger messaging SDKs. Authenticates with HTTP Basic, plus 90-day refreshable bearer
+    tokens for the Automation Framework.
+  humanURL: https://developer.khoros.com/khoroscaredevdocs/reference
+  baseURL: https://developer.khoros.com/khoroscaredevdocs/reference
+  tags:
+  - Customer Support
+  - Social Media Management
+  - Analytics
+  - Messaging
+  properties:
+  - type: Documentation
+    url: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+  - type: APIReference
+    url: https://developer.khoros.com/khoroscaredevdocs/reference
+  - type: GettingStarted
+    url: https://developer.khoros.com/khoroscaredevdocs/docs/guides-and-tutorials
+- name: Khoros Communities Classic APIs
+  description: The Lithium-lineage Khoros Communities Classic platform APIs, including the REST v1 and
+    v2 endpoints and LiQL, the SQL-like query language used to read community collections such as
+    messages, users, boards and categories. Also exposes the FreeMarker context objects used inside
+    community Studio customizations.
+  humanURL: https://developer.khoros.com/khoroscommunitydevdocs/reference/khoros-communities-platform-apis
+  baseURL: https://developer.khoros.com/khoroscommunitydevdocs/reference/khoros-communities-platform-apis
+  tags:
+  - Online Community
+  - Customer Support
+  - Query Language
+  properties:
+  - type: Documentation
+    url: https://developer.khoros.com/khoroscommunitydevdocs/docs/development-guides
+  - type: APIReference
+    url: https://developer.khoros.com/khoroscommunitydevdocs/reference/khoros-communities-platform-apis
+- name: Khoros Communities Aurora GraphQL API
+  description: The GraphQL API for Khoros Communities Aurora, the next-generation community platform,
+    used together with the Aurora SDK, theme overrides and custom pages. API credentials are generated
+    through API Apps in the community admin.
+  humanURL: https://developer.khoros.com/khorosauroradevdocs/graphql
+  baseURL: https://developer.khoros.com/khorosauroradevdocs/graphql
+  tags:
+  - Online Community
+  - GraphQL
+  properties:
+  - type: Documentation
+    url: https://developer.khoros.com/khorosauroradevdocs/docs/installing-the-sdk
+  - type: Authentication
+    url: https://developer.khoros.com/khorosauroradevdocs/docs/generating-api-credentials-with-api-apps
+- name: Khoros Flow APIs
+  description: Khoros Flow developer APIs for building conversational bots and custom chat clients —
+    the Flow Socket API (WebSocket messaging for custom chat widgets), the Flow REST API for server-side
+    and CRM integrations, and the Flow Management API for project administration.
+  humanURL: https://developer.khoros.com/khoros-flow/reference/getting-started-flow-socket
+  baseURL: https://developer.khoros.com/khoros-flow/reference/getting-started-flow-socket
+  tags:
+  - Conversational AI
+  - Messaging
+  - Bots
+  properties:
+  - type: Documentation
+    url: https://developer.khoros.com/khoros-flow/docs/overview
+  - type: APIReference
+    url: https://developer.khoros.com/khoros-flow/reference/getting-started-flow-socket
+  - type: GettingStarted
+    url: https://developer.khoros.com/khoros-flow/docs/overview-of-khoros-flow-apis
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/lithium-technologies-domain-security.yml
 - type: Website
-  url: https://www.khoros.com
+  url: https://khoros.ai/
+- type: DeveloperPortal
+  url: https://developer.khoros.com/
+- type: Documentation
+  url: https://developer.khoros.com/
+- type: APIReference
+  url: https://developer.khoros.com/khorosmarketingdevdocs/reference
+- type: GettingStarted
+  url: https://developer.khoros.com/khorosmarketingdevdocs/docs/getting-started-with-the-conversations-api
+- type: Support
+  url: https://khoros.ai/get-support/
+- type: Community
+  url: https://community.khoros.com/
+- type: Blog
+  url: https://khoros.ai/news/
+- type: BlogRSS
+  url: https://khoros.ai/feed/
+- type: GitHubOrganization
+  url: https://github.com/lithiumtech
+- type: StatusPage
+  url: https://status.khoros.com/
+- type: TermsOfService
+  url: https://khoros.ai/website-terms-use/
+- type: PrivacyPolicy
+  url: https://khoros.ai/privacy/
+- type: TrustCenter
+  url: security/lithium-technologies-trust-center.yml
+- type: Compliance
+  url: https://khoros.ai/trust-center/
+- type: Packages
+  url: packages/lithium-technologies-packages.yml
+- type: SDKs
+  url: packages/lithium-technologies-packages.yml
+- type: CLI
+  url: cli/lithium-technologies-cli.yml
+- type: Authentication
+  url: authentication/lithium-technologies-authentication.yml
+- type: Conventions
+  url: conventions/lithium-technologies-conventions.yml
+- type: Conformance
+  url: conformance/lithium-technologies-conformance.yml
+- type: Lifecycle
+  url: lifecycle/lithium-technologies-lifecycle.yml
+- type: ChangeLog
+  url: changelog/lithium-technologies-changelog.yml
+- type: Webhooks
+  url: asyncapi/lithium-technologies-webhooks.yml
+- type: Components
+  url: components/lithium-technologies-components.yml
+- type: WellKnown
+  url: well-known/lithium-technologies-well-known.yml
+- type: LLMsTxt
+  url: llms/lithium-technologies-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
