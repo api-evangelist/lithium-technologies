@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+source: live HTTP probes of the Khoros / Spredfast hosts in apis.yml
+notes: >-
+  No `/.well-known/` discovery documents were retrievable. Note two probe artefacts recorded honestly
+  rather than as hits: developer.khoros.com is a ReadMe-hosted portal that answers unknown paths with
+  a 200 redirect to its own homepage (a soft 404 — NOT a real security.txt), and api.spredfast.com
+  returns 401 at the edge for every path including `/.well-known/*`, so its discovery surface is
+  inconclusive rather than confirmed absent.
+hosts:
+- host: https://khoros.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://developer.khoros.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    result: soft-404 — redirects to portal homepage, not an RFC 9116 document
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 302
+    result: soft-404 — redirects to the community login
+- host: https://api.spredfast.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+    result: edge-authenticated — inconclusive
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+    result: edge-authenticated — inconclusive
+  - path: /.well-known/openid-configuration
+    status: 401
+    result: edge-authenticated — inconclusive
+  - path: /.well-known/api-catalog
+    status: 401
+    result: edge-authenticated — inconclusive
+documents_saved: []

@@ -1,0 +1,25 @@
+{
+  "repo": "lithium-technologies",
+  "feeds": [
+    {
+      "source": "https://khoros.ai/feed/",
+      "feed_url": "https://khoros.ai/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://community.khoros.com/",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://khoros.ai/news/",
+      "feed_url": "https://khoros.ai/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-07-25T15:00:33Z"
+}

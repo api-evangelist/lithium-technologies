@@ -1,0 +1,72 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.khoros.com/ + https://khoros.ai/trust-center/
+notes: >-
+  Khoros publishes no OpenAPI, so nothing here is derived from a machine-readable spec. Every assertion
+  is read from the public developer documentation or the trust center; anything not evidenced is
+  recorded as conforms:false rather than assumed.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Khoros Marketing documents a 3-legged OAuth 2.0 flow (/authorize, /grant, /token) issuing Bearer
+    access tokens.
+  source: https://developer.khoros.com/khorosmarketingdevdocs/docs/getting-started-with-the-conversations-api
+- id: http-basic-auth
+  conforms: true
+  evidence: Khoros Care documents HTTP Basic authentication via the Authorization header.
+  source: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+- id: graphql
+  conforms: true
+  evidence: Khoros Communities Aurora exposes a GraphQL API with a published schema explorer.
+  source: https://developer.khoros.com/khorosauroradevdocs/graphql
+- id: websocket-rfc6455
+  conforms: true
+  evidence: The Khoros Flow Socket API is a WSS WebSocket messaging channel.
+  source: https://developer.khoros.com/khoros-flow/reference/getting-started-flow-socket
+- id: soc2-type-ii
+  conforms: true
+  evidence: AICPA SOC 2 Type II named on the Khoros trust center.
+  source: https://khoros.ai/trust-center/
+- id: iso-27001
+  conforms: true
+  evidence: ISO 27001 information security certification named on the Khoros trust center.
+  source: https://khoros.ai/trust-center/
+- id: iso-27701
+  conforms: true
+  evidence: ISO 27701 privacy information management certification named on the trust center.
+  source: https://khoros.ai/trust-center/
+- id: iso-22301
+  conforms: true
+  evidence: ISO 22301 business continuity certification named on the trust center.
+  source: https://khoros.ai/trust-center/
+- id: pci-dss
+  conforms: true
+  evidence: PCI DSS compliance named on the Khoros trust center.
+  source: https://khoros.ai/trust-center/
+- id: gdpr
+  conforms: true
+  evidence: >-
+    Data Protection / Privacy Addendum published, TrustArc privacy seal, and a dedicated
+    privacy@khoros.com channel for subject access requests.
+  source: https://khoros.ai/trust-center/
+- id: openapi
+  conforms: false
+  evidence: No OpenAPI or Swagger description is published for any Khoros API surface.
+- id: asyncapi
+  conforms: false
+  evidence: >-
+    An event surface exists (Care Automation Framework, Marketing Notification API) but no AsyncAPI
+    document is published.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No application/problem+json usage found in the public documentation.
+- id: oidc
+  conforms: false
+  evidence: No OpenID Connect discovery document served on any probed host.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: No /.well-known/security.txt on khoros.ai or developer.khoros.com.
+- id: rfc8594-sunset-header
+  conforms: false
+  evidence: No Sunset/Deprecation header support documented.

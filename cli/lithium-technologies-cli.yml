@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/lithium-sdk + https://github.com/lithiumtech/lithium-sdk
+name: li
+package: lithium-sdk
+version: 1.11.0
+description: >-
+  The `li` command-line tool shipped by the Lithium (Khoros) Communities SDK. It scaffolds, builds,
+  serves and deploys community Studio plugins — FreeMarker templates, skins, endpoints and assets —
+  against a Khoros Communities Classic instance. The binary is declared as `bin: { li: bin/li.js }`
+  in the published npm package.
+install:
+- method: npm
+  command: npm install -g lithium-sdk
+- method: npm-local
+  command: npm install lithium-sdk
+docs: https://developer.khoros.com/khoroscommunitydevdocs/docs/development-guides
+repository: https://github.com/lithiumtech/lithium-sdk
+runtime: node.js
+official: true
+related_packages: packages/lithium-technologies-packages.yml
+notes: >-
+  The command surface is not published as a public reference page — the SDK development guides on
+  developer.khoros.com sit behind the Khoros community login, so individual subcommands are not
+  captured here rather than guessed. Confirmed from the npm package manifest: the CLI entrypoint is
+  `bin/li.js` exposed as `li`.

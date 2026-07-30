@@ -1,0 +1,56 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.khoros.com/
+notes: >-
+  Cross-cutting semantics captured from the public Khoros developer documentation. Khoros publishes no
+  OpenAPI, so nothing here is derived from a spec — every field is either read from the docs or left
+  explicitly unknown. Idempotency is NOT documented on any Khoros surface, so no Idempotency pointer is
+  emitted for this provider.
+authentication:
+  style: per-surface — OAuth 2.0 (Marketing), HTTP Basic + bearer (Care), API app credentials (Aurora)
+  artifact: authentication/lithium-technologies-authentication.yml
+versioning:
+  scheme: uri-path
+  examples:
+  - https://api.spredfast.com/v2
+  - Khoros Communities Classic REST v1 and v2
+  notes: Communities Classic additionally exposes LiQL, a SQL-like query language, over the v2 surface.
+  artifact: lifecycle/lithium-technologies-lifecycle.yml
+query_language:
+  name: LiQL
+  description: >-
+    A SQL-like query language unique to Khoros Communities, used to select from community collections
+    (messages, users, boards, categories) over the v2 REST surface.
+  docs: https://developer.khoros.com/khoroscommunitydevdocs/docs/liql-collection-reference
+templating:
+  name: FreeMarker
+  description: >-
+    Communities Classic Studio customizations are authored against FreeMarker context objects.
+  docs: https://developer.khoros.com/khoroscommunitydevdocs/reference/freemarker-context-object-index
+idempotency:
+  supported: false
+  notes: No idempotency key header or replay contract is documented on any Khoros API surface.
+pagination:
+  style: unknown
+  notes: >-
+    Not documented on the publicly readable pages; LiQL supports LIMIT/OFFSET-style constraints but the
+    reference page is behind the community login, so the exact parameters are not recorded here.
+rate_limiting:
+  documented: false
+  notes: No rate-limit headers or published quotas were found on the public developer pages.
+error_envelope:
+  format: unknown
+  problem_json: false
+  notes: >-
+    No RFC 9457 `application/problem+json` usage and no public error-code reference were found.
+request_tracing:
+  header: unknown
+events:
+  supported: true
+  style: event callbacks / notification webhooks
+  artifact: asyncapi/lithium-technologies-webhooks.yml
+cross_links:
+  authentication: authentication/lithium-technologies-authentication.yml
+  lifecycle: lifecycle/lithium-technologies-lifecycle.yml
+  conformance: conformance/lithium-technologies-conformance.yml
+  webhooks: asyncapi/lithium-technologies-webhooks.yml

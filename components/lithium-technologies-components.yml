@@ -1,0 +1,55 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.khoros.com/khorosbrandmessengerdocs/docs
+notes: >-
+  Khoros ships embeddable, client-side messaging and community surfaces distinct from the server-side
+  SDKs catalogued in packages/. These are end-user-facing chat and community widgets embedded into a
+  brand's own web and mobile properties.
+families:
+- name: Brand Messenger
+  description: >-
+    Khoros' owned messaging channel — an embeddable chat surface for a brand's web and mobile
+    properties, delivered as Web and Mobile SDKs and wired into Khoros Care agent workflows.
+  docs: https://developer.khoros.com/khorosbrandmessengerdocs/docs
+  components:
+  - name: Brand Messenger Web SDK
+    platform: web
+    description: Embeddable web messaging widget.
+  - name: Brand Messenger iOS SDK
+    platform: ios
+    repository: https://github.com/lithiumtech/ios-brandmessenger-sdk-dist
+  - name: Brand Messenger Android SDK
+    platform: android
+    repository: https://github.com/lithiumtech/android-brandmessenger-sdk-dist
+  - name: Brand Messenger Flutter SDK
+    platform: flutter
+    repository: https://github.com/lithiumtech/flutter_brandmessenger_sdk
+- name: Khoros Flow chat client
+  description: >-
+    Custom chat widgets built against the Flow Socket API, assisted by a first-party JavaScript SDK
+    and an iOS Swift SDK for the web client API.
+  docs: https://developer.khoros.com/khoros-flow/reference/getting-started-flow-socket
+  components:
+  - name: Flow JavaScript SDK
+    platform: web
+  - name: Flow Swift SDK
+    platform: ios
+- name: Khoros Communities Aurora theming
+  description: >-
+    Client-side customization surface for Aurora communities — theme overrides and custom pages
+    authored against the Aurora SDK, rendering brand-controlled community UI.
+  docs: https://developer.khoros.com/khorosauroradevdocs/docs/introduction-to-theme-overrides
+  components:
+  - name: Aurora theme overrides
+    platform: web
+  - name: Aurora custom pages
+    platform: web
+    docs: https://developer.khoros.com/khorosauroradevdocs/docs/introduction-to-custom-pages
+- name: Khoros Communities Classic Studio
+  description: >-
+    The Lithium-lineage community customization surface — FreeMarker components, skins and endpoints
+    built and deployed with the `li` CLI.
+  docs: https://developer.khoros.com/khoroscommunitydevdocs/reference/freemarker-context-object-index
+  components:
+  - name: FreeMarker components and skins
+    platform: web

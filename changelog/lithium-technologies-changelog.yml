@@ -1,0 +1,43 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.khoros.com/khoroscaredevdocs/changelog
+url: https://developer.khoros.com/khoroscaredevdocs/changelog
+scheme: dated
+cadence: irregular — monthly-titled posts, sparse in recent years
+notes: >-
+  The only publicly readable dated changelog across the Khoros developer portal is the Khoros Care
+  changelog. Entries are titled by month and are authored by Khoros staff. The index page lists titles
+  and dates only — per-entry detail requires opening each post — so highlights are not recorded rather
+  than invented. The other four surfaces (Marketing, Communities Classic, Aurora, Flow) publish release
+  notes only inside the login-gated Khoros community.
+entries:
+- title: December 2024
+  date: '2024-12'
+  author: Ryan Pierson
+- title: February 2024
+  date: '2024-02'
+  author: Ryan Pierson
+- title: January 2024
+  date: '2024-01'
+  author: Ryan Pierson
+- title: October 2021
+  date: '2021-10'
+  author: Ryan Pierson
+- title: January 2020
+  date: '2020-01'
+  author: Suzie Hopkins
+- title: November 2019
+  date: '2019-11'
+  author: Suzie Hopkins
+- title: July 2019
+  date: '2019-07'
+  author: Suzie Hopkins
+- title: May 2019
+  date: '2019-05'
+  author: Suzie Hopkins
+- title: March 2019
+  date: '2019-03'
+  author: Suzie Hopkins
+- title: February 2019
+  date: '2019-02'
+  author: Suzie Hopkins

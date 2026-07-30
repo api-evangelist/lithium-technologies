@@ -1,0 +1,67 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/lithiumtech + https://registry.npmjs.org/lithium-sdk
+notes: >-
+  Lithium Technologies now ships as Khoros. First-party open-source client libraries and SDKs remain
+  published under the original `lithiumtech` GitHub organization, which is still actively maintained
+  (most recent releases 2026). Only `lithium-sdk` was found on a public package registry (npm); the
+  mobile Brand Messenger SDKs are distributed as GitHub `-dist` repositories rather than via a public
+  registry, and the Aurora SDK is distributed to licensed customers through the developer portal.
+packages:
+- language: javascript
+  registry: npm
+  name: lithium-sdk
+  version: 1.11.0
+  url: https://www.npmjs.com/package/lithium-sdk
+  install: npm install -g lithium-sdk
+  repository: https://github.com/lithiumtech/lithium-sdk
+  description: Lithium (Khoros) Communities SDK — plugin scaffolding, build and deploy tooling for
+    community Studio customizations. Provides the `li` CLI binary.
+  bin: li
+  official: true
+- language: swift
+  registry: github
+  name: ios-brandmessenger-sdk-dist
+  url: https://github.com/lithiumtech/ios-brandmessenger-sdk-dist
+  install: Swift Package Manager / CocoaPods from the distribution repository
+  description: Khoros Brand Messenger iOS SDK distribution repository.
+  official: true
+- language: kotlin
+  registry: github
+  name: android-brandmessenger-sdk-dist
+  url: https://github.com/lithiumtech/android-brandmessenger-sdk-dist
+  install: Gradle dependency from the distribution repository
+  description: Khoros Brand Messenger Android SDK distribution repository.
+  official: true
+- language: dart
+  registry: github
+  name: flutter_brandmessenger_sdk
+  url: https://github.com/lithiumtech/flutter_brandmessenger_sdk
+  install: Flutter package dependency from the Git repository
+  description: Khoros Brand Messenger Flutter SDK.
+  official: true
+- language: swift
+  registry: github
+  name: li-ios-sdk
+  url: https://github.com/lithiumtech/li-ios-sdk
+  description: Lithium Community iOS SDK (legacy Communities Classic mobile SDK).
+  official: true
+- language: java
+  registry: github
+  name: li-android-sdk
+  url: https://github.com/lithiumtech/li-android-sdk
+  description: Lithium (LIA) Community Android SDK (legacy Communities Classic mobile SDK).
+  official: true
+registries_checked:
+- registry: npm
+  result: lithium-sdk found
+- registry: pypi
+  result: no first-party package found
+- registry: pub.dev
+  result: no first-party package found
+- registry: rubygems
+  result: not published
+- registry: packagist
+  result: not published
+- registry: crates.io
+  result: not published

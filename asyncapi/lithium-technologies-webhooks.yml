@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+spec_type: Webhooks
+notes: >-
+  Khoros publishes no AsyncAPI document. It does document a real event surface on two products —
+  the Khoros Care Automation Framework (event-driven callbacks to a customer-hosted endpoint) and the
+  Khoros Marketing Notification API (typed platform events). The event catalogue below records only
+  the event families named in the public docs; individual payload schemas are behind the developer
+  login and are deliberately not reconstructed here.
+surfaces:
+- name: Khoros Care Automation Framework
+  api: Khoros Care APIs
+  description: >-
+    Event-based platform that listens to back-end Khoros Care events and calls a customer-hosted
+    endpoint, which may respond with actions to perform on the conversation.
+  docs: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+  authentication: Bearer token (90-day, refreshable) created by a permissioned user with Basic Auth
+  events:
+  - name: acknowledgment
+    description: Health-check events used to monitor the availability of the customer endpoint.
+  - name: process
+    description: >-
+      Events on which the integration may perform actions — responding, prioritizing, tagging and
+      routing the conversation.
+  - name: request-status
+    description: Optional monitoring of the status of a submitted request.
+- name: Khoros Marketing Notification API
+  api: Khoros Marketing Conversations API
+  description: >-
+    Notification events emitted by the Khoros Marketing platform, grouped by type in the developer
+    reference.
+  docs: https://developer.khoros.com/khorosmarketingdevdocs/reference
+  event_types:
+  - authentication
+  - bots
+  - errors
+  - labels
+  - messages
+  - rules
+- name: Khoros Flow Socket API
+  api: Khoros Flow APIs
+  description: >-
+    WebSocket (WSS) messaging channel for custom chat clients — request a socket endpoint, open the
+    connection, then send and receive messages with keepalive.
+  docs: https://developer.khoros.com/khoros-flow/reference/getting-started-flow-socket
+  transport: websocket
+asyncapi_document: none published

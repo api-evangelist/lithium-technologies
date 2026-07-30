@@ -1,0 +1,47 @@
+generated: '2026-07-19'
+method: searched
+source: https://status.khoros.com/ + https://developer.khoros.com/
+versioning:
+  scheme: uri-path
+  current:
+    khoros_marketing: v2
+    khoros_communities_classic: v2 (v1 still documented)
+    khoros_communities_aurora: GraphQL (unversioned schema)
+  docs: https://developer.khoros.com/
+platform_generations:
+  description: >-
+    Khoros runs two generations of the Communities product side by side. "Classic" is the original
+    Lithium Communities platform with the REST v1/v2 + LiQL surface and FreeMarker/Studio
+    customization; "Aurora" is the next-generation platform with a GraphQL API, an SDK, theme
+    overrides and custom pages. Both are documented as current, with Aurora as the forward path.
+  classic_docs: https://developer.khoros.com/khoroscommunitydevdocs/docs/development-guides
+  aurora_docs: https://developer.khoros.com/khorosauroradevdocs/docs/installing-the-sdk
+legacy_apis:
+- name: Listening API
+  status: legacy
+  description: Delivers messages to Khoros Care from custom sources; labelled legacy in the docs.
+  source: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+- name: Bot API
+  status: legacy
+  description: Chatbot integration for Facebook; labelled legacy in the docs.
+  source: https://developer.khoros.com/khoroscaredevdocs/docs/khoros-care-integration-overview
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  notes: >-
+    No formal deprecation policy or RFC 8594 Sunset/Deprecation header support was found on the public
+    developer pages. Individual APIs are marked "Legacy" in prose only. No Deprecation pointer is
+    emitted for this provider.
+status_page: https://status.khoros.com/
+sla:
+  url: https://khoros.ai/legal/customer-agreements/
+  uptime_target: not published publicly
+changelog: changelog/lithium-technologies-changelog.yml
+deprecated_operations: []
+corporate_lifecycle:
+  founded: 2001
+  original_name: Lithium Technologies
+  acquired_by: Vista Equity Partners (2017)
+  merged_with: Spredfast (2019)
+  operating_name: Khoros
+  domain_move: khoros.com now redirects to khoros.ai
