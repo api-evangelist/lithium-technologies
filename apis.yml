@@ -44,6 +44,16 @@ tags:
 - Online Community
 - Social Media Management
 - Customer Engagement
+- Customer-Support
+- Marketing
+- Conversational AI
+- MarTech
+tags_raw:
+- Company
+- Enterprise Software
+- Online Community
+- Social Media Management
+- Customer Engagement
 - Customer Support
 - Marketing
 - Conversational AI
@@ -75,6 +85,11 @@ apis:
   humanURL: https://developer.khoros.com/khoroscaredevdocs/reference
   baseURL: https://developer.khoros.com/khoroscaredevdocs/reference
   tags:
+  - Customer-Support
+  - Social Media Management
+  - Analytics
+  - Messaging
+  tags_raw:
   - Customer Support
   - Social Media Management
   - Analytics
@@ -94,6 +109,10 @@ apis:
   humanURL: https://developer.khoros.com/khoroscommunitydevdocs/reference/khoros-communities-platform-apis
   baseURL: https://developer.khoros.com/khoroscommunitydevdocs/reference/khoros-communities-platform-apis
   tags:
+  - Online Community
+  - Customer-Support
+  - Query Language
+  tags_raw:
   - Online Community
   - Customer Support
   - Query Language
